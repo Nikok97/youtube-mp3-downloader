@@ -1,5 +1,10 @@
 import yt_dlp
 import os
+import shutil
+
+if shutil.which("ffmpeg") is None:
+    print("FFmpeg not found! Please install FFmpeg and add it to your PATH.")
+    exit()
 
 desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 
@@ -25,4 +30,5 @@ ydl_opts = {
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([url])
+
 
