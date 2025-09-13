@@ -10,16 +10,10 @@ desktop = os.path.join(os.path.expanduser("~"), "Desktop")
 
 url = input('Enter YouTube URL: ')
 
-#Case 1
-fval = url.rstrip().split('&list')
-url = fval[0]
-print(url)
-
-
-#Case 2
-fval = url.rstrip().split('?list')
-url = fval[0]
-print(url)
+# Remove playlist part if present
+url = url.split("&list")[0]
+url = url.split("?list")[0]
+print("Cleaned URL:", url)
 
 ydl_opts = {
     "format": "bestaudio/best",  # pick best audio
@@ -34,6 +28,7 @@ ydl_opts = {
 
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([url])
+
 
 
 
