@@ -39,7 +39,7 @@ python downloader.py
 ```
 Enter YouTube URL: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 Downloading audio...
-Conversion complete! File saved as "Never Gonna Give You Up.mp3" on your Desktop.
+Conversion complete! File saved as "Fake Plastic Trees.mp3" on your Desktop.
 ```
 
 ## Notes
